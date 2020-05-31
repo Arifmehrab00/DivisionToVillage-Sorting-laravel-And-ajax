@@ -135,7 +135,7 @@
 
 <!--- Sweet-Alert --->
 <script type="text/javascript">
-    function deleteItem(id){
+    function Delete(id){
         const swalWithBootstrapButtons = Swal.mixin({
                 customClass: {
                     confirmButton: 'btn btn-success',

@@ -25,4 +25,5 @@ Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix'=>'admin','namespace'=>'Backend','as'=>'admin.','middleware'=>['auth']], function(){
 	Route::get('/dashboard', 'dashboardController@index')->name('dashboard');
+	Route::resource('divition','divitionController');
 });
