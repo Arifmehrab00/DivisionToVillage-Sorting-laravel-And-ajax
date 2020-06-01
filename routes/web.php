@@ -26,4 +26,6 @@ Auth::routes();
 Route::group(['prefix'=>'admin','namespace'=>'Backend','as'=>'admin.','middleware'=>['auth']], function(){
 	Route::get('/dashboard', 'dashboardController@index')->name('dashboard');
 	Route::resource('divition','divitionController');
+	Route::resource('district', 'districtController');
+	Route::resource('upazila', 'upazilaController');
 });
