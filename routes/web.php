@@ -28,4 +28,6 @@ Route::group(['prefix'=>'admin','namespace'=>'Backend','as'=>'admin.','middlewar
 	Route::resource('divition','divitionController');
 	Route::resource('district', 'districtController');
 	Route::resource('upazila', 'upazilaController');
+	// Ajax Route 
+	Route::get('/districtshort', 'defaultController@districtShort')->name('districtshort');
 });

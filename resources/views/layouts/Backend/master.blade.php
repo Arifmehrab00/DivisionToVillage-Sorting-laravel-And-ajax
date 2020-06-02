@@ -30,6 +30,11 @@
         href="{{ asset('Backend/assets/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('Backend/assets/plugins/datatables.net-bs4/css/responsive.dataTables.min.css') }}">
     <!--- Extra css in others page --->
+    <style type="text/css">
+        .error{
+            color: red;
+        }
+    </style>
     @stack('css')
 </head>
 
@@ -113,6 +118,9 @@
     <!-- Sweet-Alert  -->
     <script src="{{ asset('Backend/assets/plugins/sweetalert2/dist/sweetalert2.all.min.js') }}"></script>
     <script src="{{ asset('Backend/assets/plugins/sweetalert2/sweet-alert.init.js') }}"></script>
+    <!-- Jquery Validations -->
+    <script src="{{ asset('Backend/assets/validation/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('Backend/assets/validation/form-validation-script.js') }}"></script>
     <!--- Extra js in others page --->
     @stack('js')
 <!---- Success Message -->
