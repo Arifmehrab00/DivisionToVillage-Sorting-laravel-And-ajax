@@ -42,6 +42,12 @@
                                 <li><a href="{{ route('admin.upazila.index') }}">Upazila</a></li>
                             </ul>
                         </li>
+
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Unions</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="{{ route('admin.union.index') }}">Union</a></li>
+                            </ul>
+                        </li>
                         
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Multi level dd</span></a>
                             <ul aria-expanded="false" class="collapse">
