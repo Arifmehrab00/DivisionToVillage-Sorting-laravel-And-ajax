@@ -14,9 +14,10 @@
                     html+= '<option value="'+v.id+'">'+v.name+'</option>'; 
                 });
                 $('#district').html(html);
-                var district_id = "{{ @$upazilaEdit->district_id }}";
+                // District Edit //
+                var district_id = "{{ @$unionEdit->district_id }}";
                 if(district_id != '') {
-                   $('#district').val(district_id);
+                    $('#district').val(district_id).trigger('change');
                 }
              }
           });
@@ -25,11 +26,10 @@
 </script>
 <script type="text/javascript">
     $(document).ready(function(){
-        var divition_id = "{{ @$upazilaEdit->divition_id }}";
+        var divition_id = "{{ @$unionEdit->divition_id }}";
         if(divition_id) {
-           $('#divition').val(divition_id).trigger('change');
+            $('#divition').val(divition_id).trigger('change');
         }
-
     });
 </script>
 <script type="text/javascript">
@@ -46,6 +46,11 @@
                     html+= '<option value="'+v.id+'">'+v.name+'</option>'; 
                 });
                 $('#upazila_id').html(html);
+                 // Union Edit //
+                var upazila_id = "{{ @$unionEdit->upazila_id }}";
+                if(upazila_id != '') {
+                    $('#upazila_id').val(upazila_id);
+                }
              }
           });
        });

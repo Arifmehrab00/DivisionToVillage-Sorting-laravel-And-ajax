@@ -92,16 +92,18 @@ class unionController extends Controller
     {
          // Validations
         $validation = $request->validate([
-            'name' => 'unique:upazilas'
+            'name' => 'required|unique:unions'
         ]);
         // Store Data
-        $upazila = upazila::find($id);
-        $upazila->divition_id = $request->divition;
-        $upazila->district_id = $request->district;
-        $upazila->name = $request->name;
-        $upazila->save();
+        $unionUpdate = union::find($id);
+        $unionUpdate->divition_id = $request->divition;
+        $unionUpdate->district_id = $request->district;
+        $unionUpdate->upazila_id  = $request->upazila;
+        $unionUpdate->name        = $request->name;
+        $unionUpdate->save();
         // Redirect
-        return redirect()->route('admin.upazila.index')->with('success', 'Upazila Updated Successfully');
+        return redirect()->route('admin.union.index')->with('success', 'Union Updated Successfully');
+    
     }
 
     /**
@@ -112,9 +114,9 @@ class unionController extends Controller
      */
     public function destroy($id)
     {
-        $upazilaDelete = upazila::find($id);
+        $upazilaDelete = union::find($id);
         $upazilaDelete->delete();
         // Redirect
-        return redirect()->route('admin.upazila.index')->with('success', 'Upazila Deleted Successfully');
+        return redirect()->route('admin.union.index')->with('success', 'Union Deleted Successfully');
     }
 }
